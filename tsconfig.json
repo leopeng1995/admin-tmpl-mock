@@ -18,12 +18,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "allowJs": true,
-    "sourceMap": true,
+    "sourceMap": true
   },
-  "include": [
-    "mock/**/*"
-  ],
-  "exclude": [
-    "mock/dist"
-  ]
+  "include": ["mock/**/*"],
+  "exclude": ["mock/dist"]
 }

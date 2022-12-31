@@ -8,29 +8,29 @@ export const constantRoutes = [
     children: [
       {
         path: '/redirect/:path(.*)',
-        component: 'views/redirect/index'
-      }
-    ]
+        component: 'views/redirect/index',
+      },
+    ],
   },
   {
     path: '/login',
     component: 'views/login/index',
-    meta: { hidden: true }
+    meta: { hidden: true },
   },
   {
     path: '/auth-redirect',
     component: 'views/login/auth-redirect',
-    meta: { hidden: true }
+    meta: { hidden: true },
   },
   {
     path: '/404',
     component: 'views/error-page/404',
-    meta: { hidden: true }
+    meta: { hidden: true },
   },
   {
     path: '/401',
     component: 'views/error-page/401',
-    meta: { hidden: true }
+    meta: { hidden: true },
   },
   {
     path: '',
@@ -44,10 +44,10 @@ export const constantRoutes = [
         meta: {
           title: 'dashboard',
           icon: 'dashboard',
-          affix: true
-        }
-      }
-    ]
+          affix: true,
+        },
+      },
+    ],
   },
   {
     path: '/documentation',
@@ -60,10 +60,10 @@ export const constantRoutes = [
         meta: {
           title: 'documentation',
           icon: 'documentation',
-          affix: true
-        }
-      }
-    ]
+          affix: true,
+        },
+      },
+    ],
   },
   {
     path: '/guide',
@@ -77,12 +77,12 @@ export const constantRoutes = [
         meta: {
           title: 'guide',
           icon: 'guide',
-          noCache: true
-        }
-      }
-    ]
-  }
-]
+          noCache: true,
+        },
+      },
+    ],
+  },
+];
 
 export const asyncRoutes = [
   {
@@ -93,7 +93,7 @@ export const asyncRoutes = [
       title: 'permission',
       icon: 'lock',
       roles: ['admin', 'editor'],
-      alwaysShow: true
+      alwaysShow: true,
     },
     children: [
       {
@@ -102,16 +102,16 @@ export const asyncRoutes = [
         name: 'PagePermission',
         meta: {
           title: 'pagePermission',
-          roles: ['admin']
-        }
+          roles: ['admin'],
+        },
       },
       {
         path: 'directive',
         component: 'views/permission/directive',
         name: 'DirectivePermission',
         meta: {
-          title: 'directivePermission'
-        }
+          title: 'directivePermission',
+        },
       },
       {
         path: 'role',
@@ -119,10 +119,10 @@ export const asyncRoutes = [
         name: 'RolePermission',
         meta: {
           title: 'rolePermission',
-          roles: ['admin']
-        }
-      }
-    ]
+          roles: ['admin'],
+        },
+      },
+    ],
   },
   {
     path: '/icon',
@@ -135,10 +135,10 @@ export const asyncRoutes = [
         meta: {
           title: 'icons',
           icon: 'icon',
-          noCache: true
-        }
-      }
-    ]
+          noCache: true,
+        },
+      },
+    ],
   },
   {
     path: '/components',
@@ -147,94 +147,94 @@ export const asyncRoutes = [
     name: 'ComponentDemo',
     meta: {
       title: 'components',
-      icon: 'component'
+      icon: 'component',
     },
     children: [
       {
         path: 'tinymce',
         component: 'views/components-demo/tinymce',
         name: 'TinymceDemo',
-        meta: { title: 'tinymce' }
+        meta: { title: 'tinymce' },
       },
       {
         path: 'markdown',
         component: 'views/components-demo/markdown',
         name: 'MarkdownDemo',
-        meta: { title: 'markdown' }
+        meta: { title: 'markdown' },
       },
       {
         path: 'json-editor',
         component: 'views/components-demo/json-editor',
         name: 'JsonEditorDemo',
-        meta: { title: 'jsonEditor' }
+        meta: { title: 'jsonEditor' },
       },
       {
         path: 'split-pane',
         component: 'views/components-demo/split-pane',
         name: 'SplitPaneDemo',
-        meta: { title: 'splitPane' }
+        meta: { title: 'splitPane' },
       },
       {
         path: 'avatar-upload',
         component: 'views/components-demo/avatar-upload',
         name: 'AvatarUploadDemo',
-        meta: { title: 'avatarUpload' }
+        meta: { title: 'avatarUpload' },
       },
       {
         path: 'dropzone',
         component: 'views/components-demo/dropzone',
         name: 'DropzoneDemo',
-        meta: { title: 'dropzone' }
+        meta: { title: 'dropzone' },
       },
       {
         path: 'sticky',
         component: 'views/components-demo/sticky',
         name: 'StickyDemo',
-        meta: { title: 'sticky' }
+        meta: { title: 'sticky' },
       },
       {
         path: 'count-to',
         component: 'views/components-demo/count-to',
         name: 'CountToDemo',
-        meta: { title: 'countTo' }
+        meta: { title: 'countTo' },
       },
       {
         path: 'mixin',
         component: 'views/components-demo/mixin',
         name: 'ComponentMixinDemo',
-        meta: { title: 'componentMixin' }
+        meta: { title: 'componentMixin' },
       },
       {
         path: 'back-to-top',
         component: 'views/components-demo/back-to-top',
         name: 'BackToTopDemo',
-        meta: { title: 'backToTop' }
+        meta: { title: 'backToTop' },
       },
       {
         path: 'draggable-dialog',
         component: 'views/components-demo/draggable-dialog',
         name: 'DraggableDialogDemo',
-        meta: { title: 'draggableDialog' }
+        meta: { title: 'draggableDialog' },
       },
       {
         path: 'draggable-select',
         component: 'views/components-demo/draggable-select',
         name: 'DraggableSelectDemo',
-        meta: { title: 'draggableSelect' }
+        meta: { title: 'draggableSelect' },
       },
       {
         path: 'draggable-list',
         component: 'views/components-demo/draggable-list',
         name: 'DraggableListDemo',
-        meta: { title: 'draggableList' }
+        meta: { title: 'draggableList' },
       },
       {
         path: 'draggable-kanban',
         component: 'views/components-demo/draggable-kanban',
         name: 'DraggableKanbanDemo',
-        meta: { title: 'draggableKanban' }
-      }
-    ]
+        meta: { title: 'draggableKanban' },
+      },
+    ],
   },
   {
     path: '/charts',
@@ -243,7 +243,7 @@ export const asyncRoutes = [
     name: 'Charts',
     meta: {
       title: 'charts',
-      icon: 'chart'
+      icon: 'chart',
     },
     children: [
       {
@@ -252,8 +252,8 @@ export const asyncRoutes = [
         name: 'BarChartDemo',
         meta: {
           title: 'barChart',
-          noCache: true
-        }
+          noCache: true,
+        },
       },
       {
         path: 'line-chart',
@@ -261,8 +261,8 @@ export const asyncRoutes = [
         name: 'LineChartDemo',
         meta: {
           title: 'lineChart',
-          noCache: true
-        }
+          noCache: true,
+        },
       },
       {
         path: 'mixedchart',
@@ -270,10 +270,10 @@ export const asyncRoutes = [
         name: 'MixedChartDemo',
         meta: {
           title: 'mixedChart',
-          noCache: true
-        }
-      }
-    ]
+          noCache: true,
+        },
+      },
+    ],
   },
   {
     path: '/nested',
@@ -282,7 +282,7 @@ export const asyncRoutes = [
     name: 'Nested',
     meta: {
       title: 'nested',
-      icon: 'nested'
+      icon: 'nested',
     },
     children: [
       {
@@ -296,7 +296,7 @@ export const asyncRoutes = [
             path: 'menu1-1',
             component: 'views/nested/menu1/menu1-1/index',
             name: 'Menu1-1',
-            meta: { title: 'menu1-1' }
+            meta: { title: 'menu1-1' },
           },
           {
             path: 'menu1-2',
@@ -309,31 +309,31 @@ export const asyncRoutes = [
                 path: 'menu1-2-1',
                 component: 'views/nested/menu1/menu1-2/menu1-2-1/index',
                 name: 'Menu1-2-1',
-                meta: { title: 'menu1-2-1' }
+                meta: { title: 'menu1-2-1' },
               },
               {
                 path: 'menu1-2-2',
                 component: 'views/nested/menu1/menu1-2/menu1-2-2/index',
                 name: 'Menu1-2-2',
-                meta: { title: 'menu1-2-2' }
-              }
-            ]
+                meta: { title: 'menu1-2-2' },
+              },
+            ],
           },
           {
             path: 'menu1-3',
             component: 'views/nested/menu1/menu1-3/index',
             name: 'Menu1-3',
-            meta: { title: 'menu1-3' }
-          }
-        ]
+            meta: { title: 'menu1-3' },
+          },
+        ],
       },
       {
         path: 'menu2',
         name: 'Menu2',
         component: 'views/nested/menu2/index',
-        meta: { title: 'menu2' }
-      }
-    ]
+        meta: { title: 'menu2' },
+      },
+    ],
   },
   {
     path: '/table',
@@ -342,34 +342,34 @@ export const asyncRoutes = [
     name: 'Table',
     meta: {
       title: 'table',
-      icon: 'table'
+      icon: 'table',
     },
     children: [
       {
         path: 'dynamic-table',
         component: 'views/table/dynamic-table/index',
         name: 'DynamicTable',
-        meta: { title: 'dynamicTable' }
+        meta: { title: 'dynamicTable' },
       },
       {
         path: 'draggable-table',
         component: 'views/table/draggable-table',
         name: 'DraggableTable',
-        meta: { title: 'draggableTable' }
+        meta: { title: 'draggableTable' },
       },
       {
         path: 'inline-edit-table',
         component: 'views/table/inline-edit-table',
         name: 'InlineEditTable',
-        meta: { title: 'inlineEditTable' }
+        meta: { title: 'inlineEditTable' },
       },
       {
         path: 'complex-table',
         component: 'views/table/complex-table',
         name: 'ComplexTable',
-        meta: { title: 'complexTable' }
-      }
-    ]
+        meta: { title: 'complexTable' },
+      },
+    ],
   },
   {
     path: '/example',
@@ -378,7 +378,7 @@ export const asyncRoutes = [
     name: 'Example',
     meta: {
       title: 'example',
-      icon: 'example'
+      icon: 'example',
     },
     children: [
       {
@@ -387,8 +387,8 @@ export const asyncRoutes = [
         name: 'CreateArticle',
         meta: {
           title: 'createArticle',
-          icon: 'edit'
-        }
+          icon: 'edit',
+        },
       },
       {
         path: 'edit/:id(\\d+)',
@@ -398,8 +398,8 @@ export const asyncRoutes = [
           title: 'editArticle',
           noCache: true,
           activeMenu: '/example/list',
-          hidden: true
-        }
+          hidden: true,
+        },
       },
       {
         path: 'list',
@@ -407,10 +407,10 @@ export const asyncRoutes = [
         name: 'ArticleList',
         meta: {
           title: 'articleList',
-          icon: 'list'
-        }
-      }
-    ]
+          icon: 'list',
+        },
+      },
+    ],
   },
   {
     path: '/tab',
@@ -422,10 +422,10 @@ export const asyncRoutes = [
         name: 'Tab',
         meta: {
           title: 'tab',
-          icon: 'tab'
-        }
-      }
-    ]
+          icon: 'tab',
+        },
+      },
+    ],
   },
   {
     path: '/error',
@@ -434,7 +434,7 @@ export const asyncRoutes = [
     name: 'ErrorPages',
     meta: {
       title: 'errorPages',
-      icon: '404'
+      icon: '404',
     },
     children: [
       {
@@ -443,8 +443,8 @@ export const asyncRoutes = [
         name: 'Page401',
         meta: {
           title: 'page401',
-          noCache: true
-        }
+          noCache: true,
+        },
       },
       {
         path: '404',
@@ -452,10 +452,10 @@ export const asyncRoutes = [
         name: 'Page404',
         meta: {
           title: 'page404',
-          noCache: true
-        }
-      }
-    ]
+          noCache: true,
+        },
+      },
+    ],
   },
   {
     path: '/error-log',
@@ -468,10 +468,10 @@ export const asyncRoutes = [
         name: 'ErrorLog',
         meta: {
           title: 'errorLog',
-          icon: 'bug'
-        }
-      }
-    ]
+          icon: 'bug',
+        },
+      },
+    ],
   },
   {
     path: '/excel',
@@ -480,34 +480,34 @@ export const asyncRoutes = [
     name: 'Excel',
     meta: {
       title: 'excel',
-      icon: 'excel'
+      icon: 'excel',
     },
     children: [
       {
         path: 'export-excel',
         component: 'views/excel/export-excel',
         name: 'ExportExcel',
-        meta: { title: 'exportExcel' }
+        meta: { title: 'exportExcel' },
       },
       {
         path: 'export-selected-excel',
         component: 'views/excel/select-excell',
         name: 'SelectExcel',
-        meta: { title: 'selectExcel' }
+        meta: { title: 'selectExcel' },
       },
       {
         path: 'export-merge-header',
         component: 'views/excel/merge-header',
         name: 'MergeHeader',
-        meta: { title: 'mergeHeader' }
+        meta: { title: 'mergeHeader' },
       },
       {
         path: 'upload-excel',
         component: 'views/excel/upload-excel',
         name: 'UploadExcel',
-        meta: { title: 'uploadExcel' }
-      }
-    ]
+        meta: { title: 'uploadExcel' },
+      },
+    ],
   },
   {
     path: '/zip',
@@ -516,16 +516,16 @@ export const asyncRoutes = [
     meta: {
       title: 'zip',
       icon: 'zip',
-      alwaysShow: true
+      alwaysShow: true,
     },
     children: [
       {
         path: 'download',
         component: 'views/zip/index',
         name: 'ExportZip',
-        meta: { title: 'exportZip' }
-      }
-    ]
+        meta: { title: 'exportZip' },
+      },
+    ],
   },
   {
     path: '/pdf',
@@ -538,15 +538,15 @@ export const asyncRoutes = [
         name: 'PDF',
         meta: {
           title: 'pdf',
-          icon: 'pdf'
-        }
-      }
-    ]
+          icon: 'pdf',
+        },
+      },
+    ],
   },
   {
     path: '/pdf-download-example',
     component: 'views/pdf/download',
-    meta: { hidden: true }
+    meta: { hidden: true },
   },
   {
     path: '/theme',
@@ -559,10 +559,10 @@ export const asyncRoutes = [
         name: 'Theme',
         meta: {
           title: 'theme',
-          icon: 'theme'
-        }
-      }
-    ]
+          icon: 'theme',
+        },
+      },
+    ],
   },
   {
     path: '/clipboard',
@@ -575,10 +575,10 @@ export const asyncRoutes = [
         name: 'Clipboard',
         meta: {
           title: 'clipboard',
-          icon: 'clipboard'
-        }
-      }
-    ]
+          icon: 'clipboard',
+        },
+      },
+    ],
   },
   {
     path: '/i18n',
@@ -590,21 +590,21 @@ export const asyncRoutes = [
         name: 'I18n',
         meta: {
           title: 'i18n',
-          icon: 'international'
-        }
-      }
-    ]
+          icon: 'international',
+        },
+      },
+    ],
   },
   {
     path: 'https://github.com/Armour/vue-typescript-admin-template',
     meta: {
       title: 'externalLink',
-      icon: 'link'
-    }
+      icon: 'link',
+    },
   },
   {
     path: '*',
     redirect: '/404',
-    meta: { hidden: true }
-  }
-]
+    meta: { hidden: true },
+  },
+];

@@ -1,5 +1,5 @@
-import 'reflect-metadata'
-import { ROUTER_MAP ,BASE_PATH_MAP} from './constant'
+import 'reflect-metadata';
+import { ROUTER_MAP, BASE_PATH_MAP } from './constant';
 
 /**
  * @desc 生成 http method 装饰器
@@ -24,18 +24,18 @@ function createMethodDecorator(method: string) {
  */
 function createClassDecorator() {
   // 装饰器接收路由 path 作为参数
-  return function httpMethodDecorator(basePath: string):ClassDecorator {
+  return function httpMethodDecorator(basePath: string): ClassDecorator {
     return (proto: any) => {
       const target = proto;
       const pathMap = Reflect.getMetadata(BASE_PATH_MAP, target) || [];
-      pathMap.push({path:basePath});
+      pathMap.push({ path: basePath });
       Reflect.defineMetadata(BASE_PATH_MAP, pathMap, target);
     };
   };
 }
 
 // 路径前缀
-export const prefix = createClassDecorator()
+export const prefix = createClassDecorator();
 
 // 导出 http method 装饰器
 export const post = createMethodDecorator('post');

@@ -5,47 +5,48 @@
  * @LastEditors: ZY
  * @LastEditTime: 2021-01-25 14:22:55
  */
-import faker from 'faker'
-
+import faker from 'faker';
 
 export interface UserBean {
-  id: number
-  username: string
-  password: string
-  name: string
-  email: string
-  phone: string
-  avatar: string
-  introduction: string
-  roles: string[]
+  id: number;
+  username: string;
+  password: string;
+  name: string;
+  email: string;
+  phone: string;
+  avatar: string;
+  introduction: string;
+  roles: string[];
 }
 
 const userList: UserBean[] = [
-    {
-      id: 0,
-      username: 'admin',
-      password: 'any',
-      name: 'Super Admin',
-      avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-      introduction: 'I am a super administrator',
-      email: 'admin@test.com',
-      phone: '1234567890',
-      roles: ['admin'],
-    },
-    {
-      id: 1,
-      username: 'editor',
-      password: 'any',
-      name: 'Normal Editor',
-      avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-      introduction: 'I am an editor',
-      email: 'editor@test.com',
-      phone: '1234567890',
-      roles: ['editor'],
-    }
-  ]
+  {
+    id: 0,
+    username: 'admin',
+    password: 'any',
+    name: 'Super Admin',
+    avatar:
+      'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+    introduction: 'I am a super administrator',
+    email: 'admin@test.com',
+    phone: '1234567890',
+    roles: ['admin'],
+  },
+  {
+    id: 1,
+    username: 'editor',
+    password: 'any',
+    name: 'Normal Editor',
+    avatar:
+      'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+    introduction: 'I am an editor',
+    email: 'editor@test.com',
+    phone: '1234567890',
+    roles: ['editor'],
+  },
+];
 
-const userCount = 100
+const userCount = 100;
 
 for (let i = 2; i < userCount; i++) {
   userList.push({
@@ -57,8 +58,8 @@ for (let i = 2; i < userCount; i++) {
     introduction: faker.lorem.sentence(20),
     email: faker.internet.email(),
     phone: faker.phone.phoneNumber(),
-    roles: ['visitor']
-  })
+    roles: ['visitor'],
+  });
 }
 
-export default userList
+export default userList;

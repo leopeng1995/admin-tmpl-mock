@@ -5,10 +5,10 @@ metadata:
   namespace: ${NAMESPACE}
 spec:
   ports:
-  - name: http
-    port: ${SERVER_PORT}
-    protocol: TCP
-    targetPort: ${SERVER_PORT}
+    - name: http
+      port: ${SERVER_PORT}
+      protocol: TCP
+      targetPort: ${SERVER_PORT}
   selector:
     app: ${NAME}
   type: ClusterIP
